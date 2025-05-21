@@ -26,5 +26,6 @@ This project I predicted House Prices with a Linear Regression model, and then w
 |-------------------|---------------------------|-----------------|
 | Linear Regression | Root Mean Squared Error   | 11.94747        |
 | XGBoost           | Root Mean Squared Error   | 0.12961         |
+
 *Performance on test set
 ---
