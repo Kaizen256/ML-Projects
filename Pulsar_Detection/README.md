@@ -24,7 +24,7 @@ R. J. Lyon et al., *Fifty Years of Pulsar Candidate Selection: From simple filte
 
 ## 🧠 Models Used
 
-1. **Stochastic Gradient Descent (SGDClassifier)**
+1. **Linear Support Vector Machine (SVM) using Stochastic Gradient Descent (SGD)**
 2. **XGBoost Classifier**
 
 ---
