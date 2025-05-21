@@ -1,4 +1,4 @@
-# Pulsar Detection with Linear Regression and XGBoost
+# Pulsar Detection with SGD and XGBoost
 
 Pulsars are rare types of neutron stars that emit detectable radio waves as they rotate. These emissions are of great scientific interest, but identifying them is challenging due to the overwhelming presence of noise and radio frequency interference (RFI) in telescope data.
 
