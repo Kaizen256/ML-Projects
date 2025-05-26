@@ -60,6 +60,7 @@ We trained and compared multiple models with and without hyperparameter tuning:
 | SGD Classifier (hinge)      | 91.44%                     | 92.51%        |
 
 *Sorted by Test Accuracy
+
 ---
 
 ## 📦 Libraries Used
