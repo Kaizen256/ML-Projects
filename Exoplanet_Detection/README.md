@@ -12,7 +12,7 @@ The data originates from the **Kepler Space Observatory**, a NASA mission launch
 - **Disposition**: Indicates whether an object is CONFIRMED, FALSE POSITIVE, or CANDIDATE.
 - **Data Shape**: ~10,000 objects of interest, with ~50 astrophysical features per object.
 
-Several non-informative or leakage columns were removed (like `koi_pdisposition`, `koi_fpflag_*`, etc.).
+I removed several non-informative or leakage columns were removed (like `koi_pdisposition`, `koi_fpflag_*`, etc.).
 
 📚 Original dataset: [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)
 
@@ -49,7 +49,7 @@ We trained and compared multiple models with and without hyperparameter tuning:
 
 ## 📊 Model Performance
 
-| Model                        | Cross-Validation Accuracy | Test Accuracy |
+| Model                       | Cross-Validation Accuracy  | Test Accuracy |
 |-----------------------------|----------------------------|---------------|
 | LGBM Classifier (Untuned)   | 94.40%                     | 95.03%        |
 | XGBoost (Untuned)           | 94.09%                     | 95.02%        |
@@ -59,6 +59,7 @@ We trained and compared multiple models with and without hyperparameter tuning:
 | Random Forest (Untuned)     | 93.12%                     | 93.66%        |
 | SGD Classifier (hinge)      | 91.44%                     | 92.51%        |
 
+*Sorted by Test Accuracy
 ---
 
 ## 📦 Libraries Used
