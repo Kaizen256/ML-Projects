@@ -20,7 +20,7 @@ I removed several non-informative or leakage columns were removed (like `koi_pdi
 
 ## 🧠 Models Used
 
-We trained and compared multiple models with and without hyperparameter tuning:
+Hyperparameters of each model. Performance of each model is a bit further down.
 
 - **Untuned XGBoost Classifier Hyperparameters:** Default
 - **Tuned XGBoost Classifier Hyperparameters:** colsample_bytree: 0.8, learning_rate: 0.25, max_depth: 8, n_estimators: 200, subsample: 1
