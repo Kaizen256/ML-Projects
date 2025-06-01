@@ -34,7 +34,7 @@ Here are the models trained and their hyperparameters.
 - **SGDRegressor (Default)**: penalty: `'l2'`, alpha: `0.0001`, loss: `'squared_error'`
 - **SGDRegressor (Tuned)**: penalty: `'l1'`, alpha: `0.00105`, loss: `'squared_error'`
 - **XGBoost Regressor (Default)**: default parameters
-- **XGBoost Regressor (Tuned)**: learning_rate: `0.05`, max_depth: `5`, n_estimators: `100`, colsample_bytree: `0.8`, subsample: `0.8`
+- **XGBoost Regressor (Tuned)**: learning_rate: `0.05`, max_depth: `3`, n_estimators: `200`, colsample_bytree: `0.8`, subsample: `0.8`
 - **Random Forest Regressor (Default)**: n_estimators: `100`, max_depth: `None`
 
 ---
@@ -42,6 +42,7 @@ Here are the models trained and their hyperparameters.
 ## 🔧 Preprocessing
 
 - Create age column by adding 1.5 to the rings column
+- Removed outliers
 - One-hot encoded the categorical `Sex` feature
 - Standardized numerical features using `StandardScaler`
 - Applied 5-Fold Cross Validation
@@ -51,13 +52,13 @@ Here are the models trained and their hyperparameters.
 
 ## 📊 Model Performance
 
-| Model                       | Cross-Validation RMSE  | Test Set RMSE |
+| Model                       | Cross-Validation RMSE  | Test Set RMSE  |
 |-----------------------------|------------------------|----------------|
-| XGBoost Regressor (Tuned)   | 2.1282                 | 2.2005         |
-| Random Forest (Default)     | 2.1845                 | 2.2245         |
-| SGD Regressor (Tuned)       | 2.2540                 | 2.2420         |
-| SGD Regressor (Default)     | 2.2545                 | 2.2422         |
-| XGBoost Regressor (Default) | 2.3355                 | 2.3810         |
+| XGBoost Regressor (Tuned)   | 2.1692                 | 2.0306         |
+| Random Forest (Default)     | 2.2264                 | 2.1120         |
+| SGD Regressor (Tuned)       | 2.2050                 | 2.1424         |
+| SGD Regressor (Default)     | 2.2056                 | 2.1424         |
+| XGBoost Regressor (Default) | 2.3396                 | 2.2092         |
 
 *Sorted by Cross-Validation RMSE
 
