@@ -62,6 +62,14 @@ Here are the models trained and their hyperparameters.
 
 *Sorted by Cross-Validation RMSE
 
+Optuna Parameters on XGBoost:
+
+Best RMSE: 2.099547992824006
+Best hyperparameters: {'n_estimators': 136, 'max_depth': 3, 'learning_rate': 0.036403011958195716, 'subsample': 0.5192040332447466, 'colsample_bytree': 0.8364950115095385, 'reg_alpha': 2.5498983395946624, 'reg_lambda': 0.9294309543848766}
+Test RMSE: 2.0147145840428466
+
+Added many features and used optuna to find the best parameters. Performs far better then the other models.
+
 ---
 
 ## 📦 Libraries Used
