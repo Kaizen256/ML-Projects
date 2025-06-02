@@ -96,3 +96,5 @@ The dataset originates from the [Sloan Digital Sky Survey (SDSS)](https://www.ka
   "gamma": 1.26266,
   "min_child_weight": 14
 }
+
+![Predicted vs Actual](figures/confusion.png)
