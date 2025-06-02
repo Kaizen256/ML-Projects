@@ -88,4 +88,4 @@ XGBRegressor
   "min_child_weight": 2
 }
 
-![Predicted vs Actual](figures/predicted_vs_actual.png)
+![Predicted vs Actual](figures/Predicted.png)
