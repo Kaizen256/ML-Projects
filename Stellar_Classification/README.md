@@ -20,17 +20,20 @@ The dataset originates from the [Sloan Digital Sky Survey (SDSS)](https://www.ka
 
 ## 🔧 Preprocessing
 
-# Dropped the following identifier columns and uninformative features:
+### Dropped the following identifier columns and uninformative features:
 'obj_ID','alpha','delta','run_ID','rerun_ID','cam_col','field_ID','fiber_ID','spec_obj_ID', 'plate', 'MJD'
-# Encoded class
-# Removed extreme or non-physical observations:
+
+### Encoded class
+'GALAXY':0, 'STAR':1, 'QSO': 2
+
+### Removed extreme or non-physical observations:
 u (ultraviolet magnitude) was required to be greater than 13 and greater than -4000
 g (green magnitude) was required to be greater than 12 and less than 27.5
 z (infrared magnitude) was required to be greater than 11 and less than 24.5
 r (red magnitude) was limited to values less than 26
 i (near-infrared magnitude) was limited to values less than 2
 
-# Engineered features with chat-gpt as an assistant
+### Engineered features with chat-gpt as an assistant
 | Feature Name                                     | Description                                                                                        |
 | ------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
 | `u_g`                                            | Difference between UV and green magnitudes; lower values suggest hotter stars.                     |
