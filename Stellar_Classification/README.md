@@ -57,7 +57,7 @@ The dataset originates from the [Sloan Digital Sky Survey (SDSS)](https://www.ka
 | `tilt`                                           | Shift from blue side (u+g) to red side (i+z); positive tilt suggests older/redder objects.         |
 | `flux_entropy`                                   | Entropy of normalized fluxes; low values = concentrated energy, high = evenly spread.              |
 
-## Corellation between new features and class
+## Correlation between new features and class
 ![Predicted vs Actual](figures/heatmap2.png)
 
 ## 📊 Model Performance
