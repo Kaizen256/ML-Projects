@@ -32,9 +32,11 @@ These data were sourced from the [CERN Open Data Portal](https://opendata.cern.c
 
 ## 🔧 Preprocessing
 
-# Removed values where 'M' is null
-# Dropped identifiers ('Run', 'Event')
-# Removed extreme or non-physical values:
+### Removed values where 'M' is null
+
+### Dropped identifiers ('Run', 'Event')
+
+### Removed extreme or non-physical values:
     E1 (Energy of electron 1) was limited to values less than 450 GeV
     px1 (x-component of momentum for electron 1) was restricted to values greater than -130 GeV
     py1 (y-component of momentum for electron 1) was restricted to values less than 120 GeV
@@ -46,15 +48,18 @@ These data were sourced from the [CERN Open Data Portal](https://opendata.cern.c
     pz2 (z-component of momentum for electron 2) was filtered to values between -500 and 520 GeV
     pt2 (transverse momentum of electron 2) was limited to values less than 130 GeV
     eta2 (pseudorapidity of electron 2) was filtered to be greater than -6
-# Engineered several new features using physics-informed relationships between the electron kinematics. Some were inspired by chat-gpt. These included:
+
+### Engineered several new features using physics-informed relationships between the electron kinematics. Some were inspired by chat-gpt. These included:
     same_sign: binary indicator for whether both electrons have the same charge
     p1_magnitude, p2_magnitude: reconstructed full 3D momentum magnitudes
     momentum_diff_mag: Euclidean distance between electron momenta
     total_energy: combined energy of both electrons
     delta_eta, delta_phi: angular separation between the two electrons
     pt_ratio, total_pt, eta_sum: additional kinematic descriptors
-# Split data
-# Compared StandardScaler and RobustScaler on SGDRegressor. StandardScaler performed better
+
+### Split data
+
+### Compared StandardScaler and RobustScaler on SGDRegressor. StandardScaler performed better
 
 ---
 
