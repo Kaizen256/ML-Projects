@@ -27,11 +27,11 @@ The dataset originates from the [Sloan Digital Sky Survey (SDSS)](https://www.ka
 'GALAXY':0, 'STAR':1, 'QSO': 2
 
 ### Removed extreme or non-physical observations:
-u (ultraviolet magnitude) was required to be greater than 13 and greater than -4000
-g (green magnitude) was required to be greater than 12 and less than 27.5
-z (infrared magnitude) was required to be greater than 11 and less than 24.5
-r (red magnitude) was limited to values less than 26
-i (near-infrared magnitude) was limited to values less than 2
+- u (ultraviolet magnitude) was required to be greater than 13 and greater than -4000
+- g (green magnitude) was required to be greater than 12 and less than 27.5
+- z (infrared magnitude) was required to be greater than 11 and less than 24.5
+- r (red magnitude) was limited to values less than 26
+- i (near-infrared magnitude) was limited to values less than 2
 
 ### Engineered features with chat-gpt as an assistant
 | Feature Name                                     | Description                                                                                        |
@@ -86,7 +86,6 @@ i (near-infrared magnitude) was limited to values less than 2
 
 ### 🔹 XGBoost
 {
-
   "n_estimators": 608,
   "max_depth": 12,
   "learning_rate": 0.16907,
