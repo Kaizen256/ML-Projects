@@ -64,7 +64,10 @@ The dataset originates from the [Sloan Digital Sky Survey (SDSS)](https://www.ka
 
 | Model              | Train Accuracy | Test Accuracy |
 |--------------------|----------------|---------------|
+| CatBoost (SMOTE)   | 98.27%         | 98.56%        |
+| LightGBM (SMOTE)   | 98.17%         | 98.37%        |
 | LightGBM (Optuna)  | 97.94%         | 98.04%        |
+| XGBoost (SMOTE)    | 97.86%         | 98.02%        |
 | XGBoost (Optuna)   | 97.81%         | 97.80%        |
 
 *Sorted by Test Accuracy
@@ -99,4 +102,15 @@ The dataset originates from the [Sloan Digital Sky Survey (SDSS)](https://www.ka
   "reg_lambda": 4.01019,
   "gamma": 1.26266,
   "min_child_weight": 14
+}
+
+### 🔹 CatBoost
+{
+  "iterations": 996, 
+  'learning_rate': 0.29936701106349517, 
+  "depth": 10, 
+  "l2_leaf_re"g: 1.1585276709003958, 
+  "border_count": 205, 
+  "random_strength": 9.845839240524949, 
+  "bagging_temperature": 0.44028243154808044
 }
