@@ -1,4 +1,4 @@
-# Pulsar Detection with SGD and XGBoost
+# Pulsar Detection
 
 Pulsars are rare types of neutron stars that emit detectable radio waves as they rotate. These emissions are of great scientific interest, but identifying them is challenging due to the overwhelming presence of noise and radio frequency interference (RFI) in telescope data.
 
@@ -26,16 +26,7 @@ R. J. Lyon et al., *Fifty Years of Pulsar Candidate Selection: From simple filte
 
 1. **Linear Support Vector Machine (SVM) using Stochastic Gradient Descent (SGD)**
 2. **XGBoost Classifier**
-
----
-
-## 📦 Libraries Used
-
-- `pandas`  
-- `numpy`  
-- `scikit-learn`  
-- `xgboost`  
-- `IPython`
+3. **Neural Network**
 
 ---
 
@@ -45,3 +36,4 @@ R. J. Lyon et al., *Fifty Years of Pulsar Candidate Selection: From simple filte
 |------------------|------------------|---------------|
 | SGD Classifier   | 97.98%           | 97.71%        |
 | XGBoost          | 98.08%           | 97.84%        |
+| Neural Network   | 98.06%           | 97.85%        |
