@@ -74,3 +74,5 @@ Hyperparameters of each model. Performance of each model is a bit further down.
 - `IPython.display`
 
 ---
+
+Built by Kaizen Rowe

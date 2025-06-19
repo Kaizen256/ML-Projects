@@ -37,3 +37,5 @@ R. J. Lyon et al., *Fifty Years of Pulsar Candidate Selection: From simple filte
 | SGD Classifier   | 97.98%           | 97.71%        |
 | XGBoost          | 98.08%           | 97.84%        |
 | Neural Network   | 98.06%           | 97.85%        |
+
+Built by Kaizen Rowe

@@ -80,3 +80,6 @@ Added many features and used optuna to find the best parameters. Performs far be
 - `xgboost`
 - `matplotlib`
 - `plotly`
+
+
+Built by Kaizen Rowe
