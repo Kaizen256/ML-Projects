@@ -43,3 +43,5 @@ The dataset contains responses to a mental health survey and includes attributes
 > Final submission used the **ColumnTransformer pipeline** due to its superior generalization performance.
 
 ---
+
+Built by Kaizen Rowe
