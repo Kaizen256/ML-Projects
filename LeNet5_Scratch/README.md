@@ -25,6 +25,7 @@ In this notebook I build LeNet-5, the CNN introduced by Yann LeCun for handwritt
 | **Output** | Fully Connected      | 84 → 10                                | (10,)                      |
 
 ![Architecture](figures/Architecture.png)
+Image source: Zhang, Aston and Lipton, Zachary C. and Li, Mu and Smola, Alexander J. - https://github.com/d2l-ai/d2l-en
 
 ## NumPy Implementation
 
@@ -58,3 +59,5 @@ To get practical results, I replicated the model in PyTorch and trained it on Ka
 ❌ Couldn’t fully train the NumPy model due to impractical CPU compute time, highlighting how critical optimized libraries like PyTorch are.
 
 This project gave me deep insights into the math, data flows, and engineering trade-offs behind CNNs. Even a relatively small CNN like LeNet-5 becomes computationally heavy to train purely from scratch on CPU. This exercise was invaluable to truly understand what frameworks like PyTorch do under the hood.
+
+Built by Kaizen Rowe
