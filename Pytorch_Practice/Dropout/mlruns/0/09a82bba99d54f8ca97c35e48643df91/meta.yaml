@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/rowek/OneDrive/Documents/GithubProjects/ML-Models-on-Datasets/Pytorch_Practice/mlruns/0/09a82bba99d54f8ca97c35e48643df91/artifacts
+end_time: 1750663467182
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 09a82bba99d54f8ca97c35e48643df91
+run_name: 0.2 0.1
+run_uuid: 09a82bba99d54f8ca97c35e48643df91
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750663384621
+status: 3
+tags: []
+user_id: rowek
