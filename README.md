@@ -14,7 +14,7 @@ These are projects I am especially proud of. Each projects ipynb file contains f
 
 
 # 🗂️ Other Projects
-Additional ML projects. These projects are still narrated in the ipynb files.
+Additional ML projects. These projects are still narrated in the ipynb files. Many of these projects include things that I would not 
 
 | Project                                    | Description                                                                                                                                                                                                                                                                                                                                      | Locatiom                                           |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
