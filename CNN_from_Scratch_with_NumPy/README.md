@@ -65,4 +65,7 @@ Replicated the architecture in PyTorch and trained it on a GPU, achieving ~99% a
 
 This project gave me deep insights into the math, data flows, and engineering trade-offs behind CNNs. Even a relatively small CNN like LeNet-5 becomes computationally heavy to train purely from scratch on CPU. This exercise was invaluable to truly understand what frameworks like PyTorch do under the hood.
 
+Results from the NumPy CNN:
+![Predictions](figures/prediction.png)
+
 Built by Kaizen Rowe
