@@ -6,12 +6,12 @@ These are projects I am especially proud of. Each projects ipynb file contains f
 
 | Project                                  | Description                                                                                                                                                                                  | Location                                      |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| **LeNet-5 on MNIST (NumPy & PyTorch)**   | Implemented LeNet-5 entirely from scratch in NumPy, with manual forward & backward for convolutions, pooling, and dense layers. Later replicated in PyTorch to achieve ~99% on MNIST.        | [`CNN from Scratch with Numpy/`](./CNN_from_Scratch_with_NumPy)           |
+| **LeNet-5 on MNIST (NumPy & PyTorch)**   | Implemented LeNet-5 entirely from scratch in NumPy, with manual forward & backward for convolutions, pooling, and dense layers. Later replicated in PyTorch to achieve ~99% on MNIST.        | [`CNN from Scratch with NumPy/`](./CNN_from_Scratch_with_NumPy)           |
 | **GoogLeNet from Scratch (Tiny ImageNet)** | Built Inception v1 from scratch in PyTorch, adapted for 64×64 Tiny ImageNet by modifying pooling & convolutions. Included hand-drawn architecture diagrams and tensor checks.    | [`GoogLeNet from Scratch/`](./GoogLeNet_from_Scratch_with_Pytorch) |
 | **Stellar Classification (SDSS)**        | Classified stars, galaxies, and quasars using Sloan Digital Sky Survey data. Engineered rich photometric features, handled imbalance with SMOTE, tuned CatBoost/LightGBM/XGBoost to ~98.5%.  | [`Stellar Classification/`](./Stellar_Classification) |
 | **Tiny ImageNet ResNet-34 (PyTorch)**    | Modified ResNet-34, and built from scratch in Pytorch for small 64×64 Tiny ImageNet images by removing early pooling and adjusting initial convolutions. Trained on Kaggle GPUs to ~61% top-1 accuracy.                         | [`ResNet-34 from Scratch/`](./ResNet-34_from_Scratch_with_Pytorch)   |
 | **Invariant Mass from Dielectron Events**| Predicted invariant mass of electron pairs from CMS proton-proton collisions (CERN). Used physics-driven features & XGBoost tuned to ~0.997 R² on test data.                                 | [`Invariant Mass CERN/`](./Invariant_Mass_CERN) |
-
+| **Char-level RNN from Scratch (NumPy)**  | Built a vanilla RNN from scratch using NumPy to generate Shakespeare-like text. Implemented manual forward and BPTT, with gradient clipping and softmax temperature sampling for creativity. | [`RNN from Scratch with NumPy/`](./RNN_from_scratch_with_Numpy) |
 
 # 🗂️ Other Projects
 Additional ML projects. These projects are still narrated in the ipynb files.
