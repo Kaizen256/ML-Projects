@@ -1,5 +1,5 @@
 # ML-Models-on-Datasets
-Collection of machine learning projects created using scikit-learn, PyTorch, or implemented from scratch in NumPy. All projects are original, built from the ground up based on my own understanding. No tutorials were used, these are genuine implementations to deepen my grasp of ML concepts. All projects were created as I learned, so I did unpractical things like evaluating a classification model with only accuracy on an imbalanced dataset.
+Collection of machine learning projects created using scikit-learn, PyTorch, or implemented from scratch in NumPy. All projects are original, built from the ground up based on my own understanding. No tutorials were used, these are genuine implementations to deepen my grasp of ML concepts. All projects were created as I learned, so a few include less practical decisions, like evaluating an imbalanced classification problem using only accuracy.
 
 # 🏆 Top Projects
 These are projects I am especially proud of. Each projects ipynb file contains fleshed out explanations of my thought process, and the code. This list will evolve as I continue to learn and build more.
