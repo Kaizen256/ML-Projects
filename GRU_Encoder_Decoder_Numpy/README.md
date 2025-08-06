@@ -2,6 +2,10 @@
 
 In this project, I created a machine translation model using an encoder–decoder architecture built entirely from scratch in NumPy, without using any deep learning frameworks. The model translates from English to Japanese using a GRU (Gated Recurrent Unit).
 
+## Problems faced
+
+I faced quite a few problems. The first few problems were in the GRU's backpropagation. I used matrix multiplication when I should have used Hadamard for a few calculations like dz = dh * (h_prev - c_t) and dc_preact = dc * (1 - c**2). Then I was resetting the gradient of x inside the loop so it was not accumulating across time steps. The next error I found was that I was not clipping the output layer weights and using too large of a batch size (32). This caused the decoder to almost always start its predictions with: 'トム' (Tom). Many of the Japanese sentences started with 'Tom'. Because I didn't clip the gradients, the output bias was most likely adding a huge number to 'ト' at the beginning of each sentence. The batch size being high also caused 'トム' to appear more than a few times each batch. Adding attention would be a cool addition, but it wouldn't be meaningful because my encoder length is 3. If I make it any larger, it would take way too long to train on a CPU.
+
 
 ## Dataset
 
