@@ -1,2 +1,4 @@
 Swin Transformer/tiny-imagenet-200
 timer
+Swin Transformer/training_history.json
+Swin Transformer/swin_t_best.pt
