@@ -64,8 +64,4 @@ Calculating the gradients is a tedious process, below are my calculations to get
   - Embedding update step
   - Gradient clipping
 
-Model was trained for 1000 epochs using SGD (lr=0.005), batch size 32. Loss plateaued around 2.98.
-
-## Example Inference
-
-After training, greedy decoder is used:
+Model was trained for 1040 epochs before early stopping occured. Used SGD (lr=0.008), batch size 8.
