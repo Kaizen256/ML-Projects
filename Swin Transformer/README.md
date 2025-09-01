@@ -45,7 +45,7 @@ This project is based on the original paper "Swin Transformer: Hierarchical Visi
 
 Applies windowed self-attention over non overlapping M×M windows and alternates between non-shifted and shifted windows across consecutive blocks to enable cross-window connections. There is also an MLP with GELU at the end. Residual connections are used.
 
-![Block Architecture](figures/block_arch.png)
+![Block Architecture](figures/Block_arch.png)
 
 ## Constraints
 
