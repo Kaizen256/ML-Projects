@@ -1,62 +1,51 @@
 # Swin Transformer (Tiny) PyTorch Implementation
 
-An implementation of the Swin Transformer in PyTorch, using Tiny ImageNet. Code is dataset agnostic
+An implementation of the Swin Transformer in PyTorch, trained on Tiny ImageNet.
+This project is based on the original paper "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows", with several modifications from the published design. Swin Transformers are especially effective on large scale datasets with high resolution inputs, where ViT's quadratic self-attention complexity is not ideal. Tiny ImageNet's 64x64 resolution images are tiny, with a 4x4 patch size, the feature map is reduced to 16x16 tokens in the first stage, after three rounds, it is operating on a 2x2 token grid, leaving little spatial detail for the classifier. Validation Top1 accuracy plateaued around 56% which is on par with most classifiers, but by no means top tier performance. While Tiny ImageNet is useful for experimentation, training on the full ImageNet would better demonstrate Swin's scalability and performance advantages.
 
-## Dataset
-
-- **Input size**: 224×224 RGB
-- **Train and Validation Lengths**
-  - Train: 90000 images
-  - Validation: 10000 images
+- **Input size**: 64×64 RGB
 - **Augmentations**
-  - RandomResizedCrop(224)
+  - RandomResizedCrop
   - RandomHorizontalFlip
   - Normalization
+  - ColorJitter
   - RandAugment
   - Random Erasing
   - Stochastic Depth
-
+  - Mixup
+  - CutMix
 
 ## Parameters
 
 - Patch size: 4 × 4
 - Base embed dim C: 96
 - Depths: [2, 2, 6, 2]
-- Num heads: [3, 6, 12, 24]
+- Num heads: [2, 4, 8, 16]
 - Window size: 7 for all blocks
 - Shift: 3 (7 // 2) for all shift blocks
 - MLP expantion ratio: 4.0 for all blocks
 - Drop path rate: 0.2 (linearly increased across all blocks)
 - Patch Merging / Downsample at the end of Stage 1, 2 and 3.
 
-**Stochastic depth for 12 total blocks: (np.linspace(0, 0.2, 12)):**
 
-| Stage   | Rates                                    |
-| ------- | ---------------------------------------- |
-| Stage 1 | 0.0000, 0.0182                           |
-| Stage 2 | 0.0364, 0.0545                           |
-| Stage 3 | 0.0727, 0.0909, 0.1091, 0.1273, 0.1455, 0.1636 |
-| Stage 4 | 0.1818, 0.2000                           |
+| Stage         | Blocks | Heads | Stoch_dep | In Channels | Out Channels | Output Shape             |
+|---------------|--------|-------|-----------|-------------|--------------|--------------------------|
+| PatchEmbed    | None   | None  | None           | 3           | 96           | (BS, H/4, W/4, 96)       |
+| Stage 1       | 2      | 2     | [0.0000, 0.0182]          | 96          | 192          | (BS, H/8, W/8, 192)      |
+| Stage 2       | 2      | 4     | [0.0364, 0.0545]          | 192         | 384          | (BS, H/16, W/16, 384)    |
+| Stage 3       | 6      | 8     | [0.0727, 0.0909, 0.1091, 0.1273, 0.1455, 0.1636]          | 384         | 768          | (BS, H/32, W/32, 768)    |
+| Stage 4       | 2      | 16    | [0.1818, 0.2000]          | 768         | 768          | (BS, H/32, W/32, 768)    |
+| Head          | None   | None  | None          | 768         | num_classes  | (BS, num_classes)        |
+
+## Swin Transformer Architecture
+
+![Architecture](figures/Architecture.png)
 
 ## SwinBlock (Shifted Window Transformer Block)
 
 Applies windowed self-attention over non overlapping M×M windows and alternates between non-shifted and shifted windows across consecutive blocks to enable cross-window connections. There is also an MLP with GELU at the end. Residual connections are used.
 
 ![Block Architecture](figures/block_arch.png)
-
-
-| Stage         | Blocks | Heads | Stoch_dep | In Channels | Out Channels | Output Shape             |
-|---------------|--------|-------|-----------|-------------|--------------|--------------------------|
-| PatchEmbed    | None   | None  | None           | 3           | 96           | (BS, H/4, W/4, 96)       |
-| Stage 1       | 2      | 3     | [0.0000, 0.0182]          | 96          | 192          | (BS, H/8, W/8, 192)      |
-| Stage 2       | 2      | 6     | [0.0364, 0.0545]          | 192         | 384          | (BS, H/16, W/16, 384)    |
-| Stage 3       | 6      | 12    | [0.0727, 0.0909, 0.1091, 0.1273, 0.1455, 0.1636]          | 384         | 768          | (BS, H/32, W/32, 768)    |
-| Stage 4       | 2      | 24    | [0.1818, 0.2000]          | 768         | 768          | (BS, H/32, W/32, 768)    |
-| Head          | None   | None  | None          | 768         | num_classes  | (BS, num_classes)        |
-
-## Swin Transformer Architecture
-
-![Architecture](figures/Architecture.png)
 
 ## Constraints
 
@@ -74,11 +63,12 @@ Applies windowed self-attention over non overlapping M×M windows and alternates
 
 ## Training
 
-- **Optimizer:** AdamW(lr=0.0005, weight_decay=0.05, fused=True)
-- **LR schedule:** Linear warmup for 5 epochs (1%-->100%) then Cosine for 95 epochs
+- **Optimizer:** AdamW(param_groups_weight_decay(model, 0.05), lr=3e-4, betas=(0.9, 0.999), fused=True)
+- **LR schedule:** Linear warmup for 10 epochs, then Cosine for 190 epochs
 - **Precision:** AMP (torch.cuda.amp Autocast + GradScaler)
-- **Regularization:** Gradient clipping (max_norm=1.0), stochastic depth
-- **Logging:** train_loss, train_acc, val_loss, val_acc, lr --> training_history.json
-- **Checkpoint:** best by validation accuracy --> 'swin_t_best.pt'
+- **Regularization:** Gradient clipping (max_norm=3.0), stochastic depth
+- **Logging:** train_loss, train_acc, val_loss, val_acc, lr --> [2, 2, 4, 2].json, [2, 2, 6, 2].json
+
+![6blockAcc](figures/6blockAcc.png)
 
 Built by Kaizen Rowe
