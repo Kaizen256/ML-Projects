@@ -1,3 +1,5 @@
 Swin Transformer/tiny-imagenet-200
 timer
 Single_Shot_Multibox_Detection/ssd_resnet34_pennfudan_best.pt
+LED_Gesture_TSM/frames
+.gitignore
