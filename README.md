@@ -1,7 +1,7 @@
 # ML-Models-on-Datasets
 Collection of machine learning projects created using scikit-learn, PyTorch, or implemented from scratch in NumPy. All projects are original, built from the ground up based on my own understanding. No tutorials were used, these are genuine implementations to deepen my grasp of ML concepts. All projects were created as I learned, so a few include less practical decisions, like evaluating an imbalanced classification problem using only accuracy.
 
-# 🏆 Top Projects
+# Top Projects
 These are projects I am especially proud of. Each projects ipynb file contains fleshed out explanations of my thought process, and the code. This list will evolve as I continue to learn and build more.
 
 | Project                                  | Description                                                                                                                                                                                  | Location                                      |
@@ -16,7 +16,7 @@ These are projects I am especially proud of. Each projects ipynb file contains f
 | **Tiny ImageNet ResNet-34 (PyTorch)**    | Modified ResNet-34, and built from scratch in Pytorch for small 64×64 Tiny ImageNet images by removing early pooling and adjusting initial convolutions. Trained on Kaggle GPUs to ~61% top-1 accuracy.                         | [`ResNet-34 from Scratch/`](./ResNet-34_from_Scratch_with_Pytorch)   |
 | **Invariant Mass from Dielectron Events**| Predicted invariant mass of electron pairs from CMS proton-proton collisions (CERN). Used physics-driven features & XGBoost tuned to ~0.997 R² on test data.                                 | [`Invariant Mass CERN/`](./Invariant_Mass_CERN) |
 
-# 🗂️ Other Projects
+# Other Projects
 Additional ML projects. These projects are still narrated in the ipynb files.
 
 | Project                                    | Description                                                                                                                                                                                                                                                                                                                                      | Locatiom                                           |
